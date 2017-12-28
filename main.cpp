@@ -19,5 +19,7 @@ class Konwerter
 
 int main()
 {
+    int liczba;
+    cin>>liczba;
     return 0;   
 }
