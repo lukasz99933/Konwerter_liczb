@@ -11,6 +11,9 @@ class Konwerter
     int liczba_setek;
     int liczba_tysiecy;
     string a;
+    string b;
+    string c;
+    string d;
     
     Konwerter(int podana_liczba)
     {
@@ -59,16 +62,113 @@ class Konwerter
         }
         
     }
-    
+    void dziesietne()
+    {
+        if(liczba_dziesiatek == 9)
+        {
+            b= "XC";
+        }
+        if(liczba_dziesiatek == 8)
+        {
+            b= "LXXX";
+        }
+        if(liczba_dziesiatek == 7)
+        {
+            b="LXX";
+        }
+        if(liczba_dziesiatek ==6)
+        {
+            b="LX";
+        }
+        if(liczba_dziesiatek ==5)
+        {
+            b="L";
+        }
+        if(liczba_dziesiatek ==4)
+        {
+            b="XL";
+        }
+        if(liczba_dziesiatek ==3)
+        {
+            b="XXX";
+        }
+        if(liczba_dziesiatek ==2)
+        {
+            b="XX";
+        }
+        if(liczba_dziesiatek ==1)
+        {
+            b="X";
+        }
+
+    }
+    void setne()
+    {
+        if(liczba_setek == 9)
+        {
+            c= "CM";
+        }
+        if(liczba_setek == 8)
+        {
+            c= "DCCC";
+        }
+        if(liczba_setek == 7)
+        {
+            c="DCC";
+        }
+        if(liczba_setek ==6)
+        {
+            c="DC";
+        }
+        if(liczba_setek ==5)
+        {
+            c="D";
+        }
+        if(liczba_setek ==4)
+        {
+            c="CD";
+        }
+        if(liczba_setek ==3)
+        {
+            c="CCC";
+        }
+        if(liczba_setek ==2)
+        {
+            c="CC";
+        }
+        if(liczba_setek ==1)
+        {
+            c="C";
+        }
+
+    }
+    void tysiecy()
+    {
+        if(liczba_tysiecy==3)
+        {
+            d="MMM";
+        }
+        if(liczba_tysiecy==2)
+        {
+            d="MM";
+        }
+        if(liczba_tysiecy==1)
+        {
+            d="M";
+        }
+    }
 };
 
 int main()
 {
+    cout<<"Podaj liczbę arabską: ";
     int liczba;
     cin>>liczba;
     Konwerter K(liczba);
-    cout << K.liczba_jednosci << endl << K.liczba_dziesiatek << endl << K.liczba_setek << endl << K.liczba_tysiecy << endl;
     K.jednosci();
-    cout <<"Arabskie"<< K.a<<endl;
+    K.dziesietne();
+    K.setne();
+    K.tysiecy();
+    cout <<"Oto liczba rzymska: "<<K.d<<K.c<<K.b<< K.a<<endl;
     return 0;   
 }
