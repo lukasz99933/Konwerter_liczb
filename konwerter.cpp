@@ -15,34 +15,44 @@ Konwerter::Konwerter(int podana_liczba)
     cc="C";
     m="M";
 }
+
+void Konwerter::zamiana_na_rzymskie(string znak1,string znak2, string znak3, int liczba)
+{
+    if (liczba == 9) {
+        e = znak3+znak1;
+    }
+    if (liczba == 8) {
+        e = znak2+znak3+znak3+znak3;
+    }
+    if (liczba == 7) {
+        e = znak2+znak3+znak3;
+    }
+    if (liczba == 6) {
+        e = znak2+znak3;
+    }
+    if (liczba == 5) {
+        e = znak2;
+    }
+    if (liczba == 4) {
+        e = znak3+znak2;
+    }
+    if (liczba == 3) {
+        e = znak3+znak3+znak3;
+    }
+    if (liczba == 2) {
+        e = znak3+znak3;
+    }
+    if (liczba == 1) {
+        e = znak3;
+    }
+}
+
 void Konwerter::jednosci()
 {
-    if (liczba_jednosci == 9) {
-        a = "IX";
-    }
-    if (liczba_jednosci == 8) {
-        a = "VIII";
-    }
-    if (liczba_jednosci == 7) {
-        a = "VII";
-    }
-    if (liczba_jednosci == 6) {
-        a = "VI";
-    }
-    if (liczba_jednosci == 5) {
-        a = "V";
-    }
-    if (liczba_jednosci == 4) {
-        a = "IV";
-    }
-    if (liczba_jednosci == 3) {
-        a = "III";
-    }
-    if (liczba_jednosci == 2) {
-        a = "II";
-    }
-    if (liczba_jednosci == 1) {
-        a = "I";
+    if(liczba_jednosci!=0)
+    {
+        zamiana_na_rzymskie(x,v,i,liczba_jednosci);
+        a=e;
     }
 }
 

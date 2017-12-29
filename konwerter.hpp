@@ -20,8 +20,10 @@ public:
     string b;
     string c;
     string d;
+    string e;
 
     Konwerter(int podana_liczba);
+    void zamiana_na_rzymskie(string znak1, string znak2,string znak3,int liczba);
     void jednosci();
     void dziesietne();
     void setne();
