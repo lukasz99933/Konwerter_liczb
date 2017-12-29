@@ -5,22 +5,21 @@ using namespace std;
 
 class Konwerterrzym
 {
-    char g='M';
-    char f='D';
-    char e='C';
-    char d='L';
-    char c='X';
-    char b='V';
-    char a='I';
-    char poprzednia;
+    char m;
+    char d;
+    char c;
+    char l;
+    char x;
+    char v;
+    char i;
     string cyfra;
-
+	int dlugosc_wyrazu; 
 
 	public:
     Konwerterrzym(string podana_cyfra);
 	void konwertowanie();
 	int wynik;
-	int dlugosc_wyrazu; 
+	
 };
 
 #endif
