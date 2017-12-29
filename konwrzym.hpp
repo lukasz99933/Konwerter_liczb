@@ -5,14 +5,14 @@ using namespace std;
 
 class Konwerterrzym
 {
-    char m='M';
-    char d='D';
-    char c='C';
-    char l='L';
-    char x='X';
-    char v='V';
-    char i='I';
-    char tab[10];
+    char g='M';
+    char f='D';
+    char e='C';
+    char d='L';
+    char c='X';
+    char b='V';
+    char a='I';
+    char poprzednia;
     string cyfra;
 
 

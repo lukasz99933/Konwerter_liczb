@@ -17,7 +17,8 @@ int main()
     //if (K.wynik == "MCCIV") {
       //  cout << "Zamiana przebiegła pomyślnie!" << endl;
     //}
-	Konwerterrzym J("III");
-	cout << J.dlugosc_wyrazu<<endl;	
+	Konwerterrzym J("MDCLXVI");
+	J.konwertowanie();
+	cout << J.wynik<<endl;	
     return 0;
 }
