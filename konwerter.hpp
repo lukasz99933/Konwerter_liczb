@@ -21,12 +21,13 @@ class Konwerter {
     string d;
     string e;
 
-    void zamiana_na_rzymskie(string znak1, string znak2,string znak3,int liczba);
+    void zamiana_na_rzymskie(string znak1, string znak2, string znak3, int liczba);
     void jednosci();
     void dziesietne();
     void setne();
     void tysiecy();
-    public:
+
+public:
     void result();
     string wynik;
     Konwerter(int podana_liczba);
