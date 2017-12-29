@@ -16,11 +16,13 @@ public:
     string cc;
     string l;
     string m;
+    string dd;
     string a;
     string b;
     string c;
     string d;
     string e;
+    string wynik;
 
     Konwerter(int podana_liczba);
     void zamiana_na_rzymskie(string znak1, string znak2,string znak3,int liczba);
@@ -28,6 +30,7 @@ public:
     void dziesietne();
     void setne();
     void tysiecy();
+    void result();
 };
 
 #endif

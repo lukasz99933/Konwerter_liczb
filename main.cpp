@@ -10,10 +10,7 @@ int main()
     int liczba;
     cin >> liczba;
     Konwerter K(liczba);
-    K.jednosci();
-    K.dziesietne();
-    K.setne();
-    K.tysiecy();
-    cout << "Oto liczba rzymska: " << K.d << K.c << K.b << K.a << endl;
+    K.result();
+    cout << "Oto liczba rzymska: " << K.wynik << endl;
     return 0;
 }

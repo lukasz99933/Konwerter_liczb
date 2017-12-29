@@ -14,6 +14,7 @@ Konwerter::Konwerter(int podana_liczba)
     l="L";
     cc="C";
     m="M";
+    dd="D";
 }
 
 void Konwerter::zamiana_na_rzymskie(string znak1,string znak2, string znak3, int liczba)
@@ -49,82 +50,46 @@ void Konwerter::zamiana_na_rzymskie(string znak1,string znak2, string znak3, int
 
 void Konwerter::jednosci()
 {
-    if(liczba_jednosci!=0)
-    {
         zamiana_na_rzymskie(x,v,i,liczba_jednosci);
         a=e;
-    }
 }
 
 void Konwerter::dziesietne()
 {
-    if (liczba_dziesiatek == 9) {
-        b = "XC";
-    }
-    if (liczba_dziesiatek == 8) {
-        b = "LXXX";
-    }
-    if (liczba_dziesiatek == 7) {
-        b = "LXX";
-    }
-    if (liczba_dziesiatek == 6) {
-        b = "LX";
-    }
-    if (liczba_dziesiatek == 5) {
-        b = "L";
-    }
-    if (liczba_dziesiatek == 4) {
-        b = "XL";
-    }
-    if (liczba_dziesiatek == 3) {
-        b = "XXX";
-    }
-    if (liczba_dziesiatek == 2) {
-        b = "XX";
-    }
-    if (liczba_dziesiatek == 1) {
-        b = "X";
-    }
+        zamiana_na_rzymskie(cc,l,x,liczba_dziesiatek);
+        b=e;
 }
 void Konwerter::setne()
 {
-    if (liczba_setek == 9) {
-        c = "CM";
-    }
-    if (liczba_setek == 8) {
-        c = "DCCC";
-    }
-    if (liczba_setek == 7) {
-        c = "DCC";
-    }
-    if (liczba_setek == 6) {
-        c = "DC";
-    }
-    if (liczba_setek == 5) {
-        c = "D";
-    }
-    if (liczba_setek == 4) {
-        c = "CD";
-    }
-    if (liczba_setek == 3) {
-        c = "CCC";
-    }
-    if (liczba_setek == 2) {
-        c = "CC";
-    }
-    if (liczba_setek == 1) {
-        c = "C";
-    }
+        zamiana_na_rzymskie(m,dd,cc,liczba_setek);
+        c=e;
 }
 void Konwerter::tysiecy()
 {
-    if (liczba_tysiecy == 3) {
-        d = "MMM";
+        zamiana_na_rzymskie("ERROR","ERROR",m,liczba_tysiecy);
+        d=e;
+}
+
+void Konwerter::result()
+{
+    if(liczba_tysiecy!=0)
+    {
+        tysiecy();
+        wynik=d;
     }
-    if (liczba_tysiecy == 2) {
-        d = "MM";
+    if(liczba_setek!=0)
+    {
+        setne();
+        wynik+=c;
     }
-    if (liczba_tysiecy == 1) {
-        d = "M";
+    if(liczba_dziesiatek!=0)
+    {
+        dziesietne();
+        wynik+=b;
+    }
+    if(liczba_jednosci!=0)
+    {
+        jednosci();
+        wynik+=a;
     }
 }
