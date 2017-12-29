@@ -8,6 +8,12 @@ Konwerter::Konwerter(int podana_liczba)
     liczba_dziesiatek = podana_liczba / 10 % 10;
     liczba_setek = podana_liczba / 100 % 10;
     liczba_tysiecy = podana_liczba / 1000;
+    i="I";
+    v="V";
+    x="X";
+    l="L";
+    cc="C";
+    m="M";
 }
 void Konwerter::jednosci()
 {

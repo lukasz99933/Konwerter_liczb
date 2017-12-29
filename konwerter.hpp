@@ -10,6 +10,12 @@ public:
     int liczba_dziesiatek;
     int liczba_setek;
     int liczba_tysiecy;
+    string i;
+    string v;
+    string x;
+    string cc;
+    string l;
+    string m;
     string a;
     string b;
     string c;
