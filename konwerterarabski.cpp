@@ -70,7 +70,7 @@ void Konwerterarabski::tysiecy()
     d = e;
 }
 
-void Konwerterarabski::result()
+string Konwerterarabski::result()
 {
     if (liczba_tysiecy != 0) {
         tysiecy();
@@ -88,4 +88,5 @@ void Konwerterarabski::result()
         jednosci();
         wynik += a;
     }
+	return wynik;
 }

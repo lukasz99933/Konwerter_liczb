@@ -26,10 +26,9 @@ class Konwerterarabski {
     void dziesietne();
     void setne();
     void tysiecy();
-
+	string wynik;
 public:
-    void result();
-    string wynik;
+    string result();
     Konwerterarabski(int podana_liczba);
 };
 
